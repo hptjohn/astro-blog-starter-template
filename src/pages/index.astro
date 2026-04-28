@@ -10,11 +10,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 <script>
- 	var newUserId = "";
+ 	var newUserId = "" ;
 	newUserId=crypto.randomUUID();
 
 function identifyUser() {
-	var userId = “”;
+	var userId = “” ;
 	userId = newUserId;
 
 analytics.identify(userId, {
@@ -26,7 +26,7 @@ analytics.identify(userId, {
 	lastName : document.getElementById(“lastName”).value
 	});
 
-analytics.track(“New pet registered” , {
+analytics.track('New pet registered' , {
 		petName : document.getElementById(“pet”).value
 	});
 
@@ -36,7 +36,7 @@ alert{“Thanks for sending the details. We will be in touch soon”)
 
 function trackButtonClicked() {
 
-	analytics.track("Button Clicked" , {
+	analytics.track('Button Clicked' , {
 		email : document.getElementById(“email”).value,
 		plan : document.getElementById(“plan”).value
 	});

@@ -14,6 +14,11 @@ analytics.identify(‘userId’ , {
 	firstName: document.getElementById(‘firstName’).value,
 	lastName : document.getElementById(‘lastName’).value
 	});
+analytics.track('New pet registered' , {
+		petName : document.getElementById(“pet”).value
+	});
+
+alert{“Thanks for sending the details. We will be in touch soon”)
 
 }
 </script>

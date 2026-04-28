@@ -73,5 +73,13 @@ import Layout from '../layouts/BlogPost.astro';
   </div>
   <button type="submit">Submit</button>
 </form>
+
+analytics.identify(' {{user.id}} ', {
+  name: '{{user.fullname}}',
+  email: '{{user.email}}'
+});
+analytics.track('Signed Up', {
+  plan: 'Enterprise'
+});
 	</p>
 </Layout>

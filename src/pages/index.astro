@@ -12,12 +12,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <script>
 
 function identifyUser() {
-
- 	var newUserId = "" ;
-	newUserId=crypto.randomUUID();
-
 	var userId = "" ;
-	userId = newUserId;
+	userId = crypto.randomUUID();
 
 analytics.identify(userId, {
 	email : document.getElementById("email").value,
@@ -27,7 +23,22 @@ analytics.identify(userId, {
 	firstName: document.getElementById("firstName").value,
 	lastName : document.getElementById("lastName").value
 	});
+analytics.track('New pet registered' , {
+		petName : document.getElementById(“pet”).value
+	});
 
+alert{“Thanks for sending the details. We will be in touch soon”)
+
+}
+
+function trackButtonClicked() {
+
+	analytics.track('Button Clicked' , {
+		email : document.getElementById(“email”).value,
+		plan : document.getElementById(“plan”).value
+	});
+
+	alert{“Button Clicked Triggered!!”)
 }
 </script>
 	</head>

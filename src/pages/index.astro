@@ -12,7 +12,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <script>
 
 function identifyUser() {
-	var userId = crypto.randomUUID();
+	var newUserId = "" ;
+	newUserId=crypto.randomUUID();
+
+	var userId = "" ;
+	userId = newUserId;
 
 analytics.identify(userId, {
 	email : document.getElementById("email").value,

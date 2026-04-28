@@ -11,9 +11,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 <script>
 
-
-function identifyUser() {
-
 analytics.identify('12091906-01011992' , {
 	email : document.getElementById("email").value,
 	phone : document.getElementById("phone").value,
@@ -23,7 +20,6 @@ analytics.identify('12091906-01011992' , {
 	lastName : document.getElementById("lastName").value
 	});
 
-}
 </script>
 
 	</head>

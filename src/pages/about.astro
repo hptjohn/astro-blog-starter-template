@@ -53,10 +53,25 @@ import Layout from '../layouts/BlogPost.astro';
 	</p>
 
 	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+		<form id="contact-form" method="POST" action="sendmail.php">
+  <div class="form-row form-error" style="display:none;"></div>
+  <div class="form-row">
+    <label for="contact-form-name">Name:</label>
+    <input id="contact-form-name" class="form-input" type="text" name="name" required>
+  </div>
+  <div class="form-row">
+    <label for="contact-form-email">Email:</label>
+    <input id="contact-form-email" class="form-input" type="email" name="email" required>
+  </div>
+  <div class="form-row">
+    <label for="contact-form-phone">Phone:</label>
+    <input id="contact-form-phone" class="form-input" type="tel" name="phone">
+  </div>
+  <div class="form-row">
+    <label for="contact-form-message">Message:</label>
+    <textarea id="contact-form-message" class="form-input" name="message" required></textarea>
+  </div>
+  <button type="submit">Submit</button>
+</form>
 	</p>
 </Layout>

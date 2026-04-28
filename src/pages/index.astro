@@ -9,6 +9,41 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+<script>
+ 	var newUserID = "";
+	newUserID.crypto.randomUUID();
+
+function identifyUser() {
+	var userID = “”;
+	userID - newUserId;
+
+analytics.identify(userID, {
+	email : document.getElementById(“email”).value,
+	phone : document.getElementById(“phone”).value,
+	plan : document.getElementById(“plan”).value,
+	petName : document.getElementById(“pet”).value,
+	firstName: document.getElementById(“firstName”).value,
+	lastName : document.getElementById(“lastName”).value
+	});
+
+analytics.track(“New pet registered” , {
+		petName : document.getElementById(“pet”).value
+	});
+
+alert{“Thanks for sending the details. We will be in touch soon”)
+
+}
+
+function trackbuttonClicked() {
+
+	analytics.track(‘Button Clicked’ , {
+		email : document.getElementById(“email”).value,
+		plan : document.getElementById(“plan”).value
+	});
+
+alert{“Button Clicked Triggered”)
+
+</script>
 	</head>
 	<body>
 		<Header />
@@ -51,6 +86,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <label for="contact-form-name">Name:</label>
     <input id="contact-form-name" class="form-input" type="text" name=“firstName" required>
   </div>
+ <div class="form-row">
+    <label for="contact-form-name">Phone:</label>
+    <input id="contact-form-name" class="form-input" type="text" name=“phone" required>
+  </div>
+ <div class="form-row">
+    <label for="contact-form-name">Plan:</label>
+    <input id="contact-form-name" class="form-input" type="text" name=“firstName" required>
+  </div>
   <div class="form-row">
     <label for="contact-form-email">Email:</label>
     <input id="contact-form-email" class="form-input" type="email" name="email" required>
@@ -65,6 +108,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
   </div>
   <button type="submit">Submit</button>
 </form>
+
+<form id="upgradeForm">
+  <input type="text" name="firstName" placeholder="First Name" required>
+  <input type="text" name="lastName" placeholder="Last Name" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="tel" name="phone" placeholder="Phone Number">
+  <input type="text" name="petName" placeholder="Pet Name">
+  
+  <select name="upgradePlan">
+    <option value="basic">Basic</option>
+    <option value="pro">Pro</option>
+    <option value="enterprise">Enterprise</option>
+  </select>
+
+  <button type="submit">Submit Upgrade</button>
+</form>
+
 </p>
 		</main>
 		<Footer />

@@ -10,11 +10,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 <script>
- 	var newUserId = ' ' ;
-	newUserId=crypto.randomUUID();
+
 
 function identifyUser() {
-	var userId = ' ' ;
+
+ 	var newUserId = "" ;
+	newUserId=crypto.randomUUID();
+	var userId = "" ;
 	userId = newUserId;
 
 analytics.identify(userId, {

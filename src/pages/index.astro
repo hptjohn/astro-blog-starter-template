@@ -15,9 +15,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 function identifyUser() {
 	var userId = “”;
-	userID = newUserId;
+	userId = newUserId;
 
-analytics.identify(userID, {
+analytics.identify(userId, {
 	email : document.getElementById(“email”).value,
 	phone : document.getElementById(“phone”).value,
 	plan : document.getElementById(“plan”).value,
@@ -36,7 +36,7 @@ alert{“Thanks for sending the details. We will be in touch soon”)
 
 function trackButtonClicked() {
 
-	analytics.track(‘Button Clicked’ , {
+	analytics.track("Button Clicked" , {
 		email : document.getElementById(“email”).value,
 		plan : document.getElementById(“plan”).value
 	});

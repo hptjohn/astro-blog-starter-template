@@ -20,5 +20,15 @@ analytics.track('New pet registered' , {
 
 alert{“Thanks for sending the details. We will be in touch soon”)
 
+function trackButtonClicked() {
+
+	analytics.track('Button Clicked' , {
+		email : document.getElementById(“email”).value,
+		plan : document.getElementById(“plan”).value
+	});
+
+	alert{“Button Clicked Triggered!!”)
+}
+	
 }
 </script>

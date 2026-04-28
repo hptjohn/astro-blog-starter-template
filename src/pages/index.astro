@@ -10,12 +10,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 <script>
- 	var newUserID = "";
-	newUserID.crypto.randomUUID();
+ 	var newUserId = "";
+	newUserId=crypto.randomUUID();
 
 function identifyUser() {
-	var userID = “”;
-	userID - newUserId;
+	var userId = “”;
+	userID = newUserId;
 
 analytics.identify(userID, {
 	email : document.getElementById(“email”).value,
@@ -34,14 +34,14 @@ alert{“Thanks for sending the details. We will be in touch soon”)
 
 }
 
-function trackbuttonClicked() {
+function trackButtonClicked() {
 
 	analytics.track(‘Button Clicked’ , {
 		email : document.getElementById(“email”).value,
 		plan : document.getElementById(“plan”).value
 	});
 
-	alert{“Button Clicked Triggered”)
+	alert{“Button Clicked Triggered!!”)
 }
 </script>
 	</head>

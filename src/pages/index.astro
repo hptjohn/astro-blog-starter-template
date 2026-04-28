@@ -13,10 +13,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 
 function identifyUser() {
- 	var newUserId = ' ' ;
-	newUserId=crypto.randomUUID();
-	var userId = ' ' ;
-	userId = newUserId;
+
+	userId = 12345;
 
 analytics.identify(‘userId’ , {
 	email : document.getElementById(‘email’).value,

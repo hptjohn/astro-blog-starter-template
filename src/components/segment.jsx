@@ -1,12 +1,12 @@
 <script>
- 	var newUserId = ' ' ;
+ 	var newUserId = "" ;
 	newUserId=crypto.randomUUID();
 
 function identifyUser() {
-	var userId = ' ' ;
+	var userId = "" ;
 	userId = newUserId;
 
-analytics.identify(‘12345’ , {
+analytics.identify(‘userId’ , {
 	email : document.getElementById(‘email’).value,
 	phone : document.getElementById(‘phone’).value,
 	plan : document.getElementById(‘plan’).value,

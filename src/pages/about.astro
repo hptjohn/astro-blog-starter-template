@@ -73,7 +73,7 @@ import Layout from '../layouts/BlogPost.astro';
   </div>
   <button type="submit">Submit</button>
 </form>
-
+	</p>
 analytics.identify(' {{user.id}} ', {
   name: '{{user.fullname}}',
   email: '{{user.email}}'
@@ -81,5 +81,4 @@ analytics.identify(' {{user.id}} ', {
 analytics.track('Signed Up', {
   plan: 'Enterprise'
 });
-	</p>
 </Layout>

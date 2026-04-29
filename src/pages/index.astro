@@ -10,34 +10,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<Header />
-
-<script is:inline>
-function identifyUser() {
-	var userId = "" ;
-	userId = crypto.randomUUID();
-var phone = document.getElementById("phone").value;
-alert("Random ID =" + userId)
-alert("phone =" + phone)
-
-analytics.identify('userId' , {
-
-	phone : document.getElementById('phone').value,
-	plan : document.getElementById("plan").value,
-	petName : document.getElementById("pet").value,
-	firstName: document.getElementById("firstName").value,
-	lastName : document.getElementById("lastName").value
-	});
-
-analytics.track('Signed Up', {
-  plan: 'Enterprise'
-});
-}
-</script>
-
-
-
-
-
 		<main>
 			<h1>🧑‍🚀 Hello, Astronaut!</h1>
 			<p>
@@ -115,6 +87,32 @@ analytics.track('Signed Up', {
 
   <input type="button" onclick="identifyUser()" value="Submit Plan Upgrade">
 </form>
+
+
+<script is:inline>
+function identifyUser() {
+	var userId = "" ;
+	userId = crypto.randomUUID();
+	var phone = document.getElementById("phone").value;
+
+alert("Random ID =" + userId)
+alert("phone =" + phone)
+
+analytics.identify('userId' , {
+
+	phone : document.getElementById("phone").value,
+	plan : document.getElementById("plan").value,
+	petName : document.getElementById("pet").value,
+	firstName: document.getElementById("firstName").value,
+	lastName : document.getElementById("lastName").value
+	});
+
+analytics.track('Signed Up', {
+  plan: 'Enterprise'
+});
+}
+</script>
+
 
 <script is:inline>
 function msg() {

@@ -16,8 +16,10 @@ function identifyUser() {
 	var userId = "" ;
 	userId = crypto.randomUUID();
 
+alert("userId")
+
 analytics.identify('userId' , {
-	email : document.getElementById("email").value,
+
 	phone : document.getElementById("phone").value,
 	plan : document.getElementById("plan").value,
 	petName : document.getElementById("pet").value,

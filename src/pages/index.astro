@@ -44,14 +44,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			</p>
 <p>
 
-<h1>Demo Sending information to Segment for Page Idenify and Track </h1>
+<h4>Please upgrade your Astronaut plan to see the Moon! </h1>
 
 <form id="upgradeForm">
   <input type="text" name="firstName" placeholder="First Name" required>
   <input type="text" name="lastName" placeholder="Last Name" required>
   <input type="email" name="email" placeholder="Email" required>
   <input type="tel" name="phone" placeholder="Phone Number">
-  <input type="text" name="petName" placeholder="Pet Name">
+  <input type="text" name="Astronaut" placeholder="Pet Name">
   
   <select name="upgradePlan">
     <option value="basic">Basic</option>
@@ -72,13 +72,13 @@ analytics.identify(userId , {
 	email : document.getElementById('upgradeForm').elements['email'].value,
 	phone : document.getElementById('upgradeForm').elements['phone'].value,
 	plan : document.getElementById('upgradeForm').elements['upgradePlan'].value,
-	petName : document.getElementById('upgradeForm').elements['petName'].value,
+	Astronaut : document.getElementById('upgradeForm').elements['Astronaut'].value,
 	firstName:document.getElementById('upgradeForm').elements['firstName'].value,
 	lastName : document.getElementById('upgradeForm').elements['lastName'].value
 	});
 
 analytics.track('New pet registered' , {
-		petName : document.getElementById('upgradeForm').elements['petName'].value
+		petName : document.getElementById('upgradeForm').elements['Astronaut'].value
 	});
 }
 </script>

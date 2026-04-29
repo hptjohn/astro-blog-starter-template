@@ -90,12 +90,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 
 <script is:inline>
-function form() {
-  getFormData = (selector) => Object.fromEntries(new FormData(document.querySelector(selector)))
-}
-</script>
-
-<script is:inline>
 function identifyUser() {
 	var userId = "" ;
 	userId = crypto.randomUUID();
@@ -107,7 +101,7 @@ alert("phone =" + phone)
 analytics.identify('userId' , {
 	email : document.getElementById('upgradeForm').elements['email'].value,
 	phone : document.getElementById('upgradeForm').elements['phone'].value,
-	plan : document.getElementById('upgradeForm').elements['plan'].value,
+	plan : document.getElementById('upgradeForm').elements['upgradePlan'].value,
 	petName : document.getElementById('upgradeForm').elements['pet'].value,
 	firstName:document.getElementById('upgradeForm').elements['firstName'].value,
 	lastName : document.getElementById('upgradeForm').elements['lastName'].value

@@ -88,11 +88,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
   <input type="button" onclick="../components/test.jsx" value="Submit Plan Upgrade">
 </form>
 
+<script is:inline>
+function msg() {
+  alert("Hello world!")
+}
+</script>
+
 <h1>Show a Push Button</h1>
 
 <p>The button below activates a JavaScript function when it is clicked.</p>
 <form>
-  <input type="button" value="Click me" onclick="../components/hello.jsx">
+  <input type="button" value="Click me" onclick="msg()">
 </form>
 
 

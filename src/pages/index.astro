@@ -15,8 +15,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	var userId = "" ;
 	userId = crypto.randomUUID();
 
-analytics.identify(userId , {
-	email : document.getElementById("email").value,
+analytics.identify('userId' , {
+	email : 'document.getElementById("email").value',
 	phone : document.getElementById("phone").value,
 	plan : document.getElementById("plan").value,
 	petName : document.getElementById("pet").value,
@@ -24,9 +24,9 @@ analytics.identify(userId , {
 	lastName : document.getElementById("lastName").value
 	});
 
-analytics.track('New pet registered' , {
-		petName : document.getElementById(“pet”).value
-	});
+analytics.track('Signed Up', {
+  plan: 'Enterprise'
+});
 
 alert(“Thanks for sending the details. We will be in touch soon”)
 }

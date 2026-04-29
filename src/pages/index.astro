@@ -105,12 +105,12 @@ alert("Random ID =" + userId)
 alert("phone =" + phone)
 
 analytics.identify('userId' , {
-
-	phone : document.getElementById("phone").value,
-	plan : document.getElementById("plan").value,
-	petName : document.getElementById("pet").value,
-	firstName: document.getElementById("firstName").value,
-	lastName : document.getElementById("lastName").value
+	email : document.getElementById('upgradeForm').elements['email'].value,
+	phone : document.getElementById('upgradeForm').elements['phone'].value,
+	plan : document.getElementById('upgradeForm').elements['plan'].value,
+	petName : document.getElementById('upgradeForm').elements['pet'].value,
+	firstName:document.getElementById('upgradeForm').elements['firstName'].value,
+	lastName : document.getElementById('upgradeForm').elements['lastName'].value
 	});
 
 analytics.track('Signed Up', {

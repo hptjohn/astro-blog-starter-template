@@ -98,7 +98,7 @@ function identifyUser() {
 alert("Random ID =" + userId)
 alert("phone =" + phone)
 
-analytics.identify('userId' , {
+analytics.identify(userId , {
 	email : document.getElementById('upgradeForm').elements['email'].value,
 	phone : document.getElementById('upgradeForm').elements['phone'].value,
 	plan : document.getElementById('upgradeForm').elements['upgradePlan'].value,
@@ -107,9 +107,25 @@ analytics.identify('userId' , {
 	lastName : document.getElementById('upgradeForm').elements['lastName'].value
 	});
 
-analytics.track('Signed Up', {
-  plan: 'Enterprise'
-});
+analytics.track('New pet registered' , {
+		petName : document.getElementById('upgradeForm').elements['petName'].value
+	});
+
+alert{“Thanks for sending the details. We will be in touch soon”)
+
+}
+
+</script is:inline>
+
+function trackButtonClicked() {
+
+	analytics.track('Button Clicked' , {
+		email : document.getElementById('upgradeForm').elements['email'].value,
+		plan : document.getElementById('upgradeForm').elements['upgradePlan'].value
+	});
+
+	alert{“Button Clicked Triggered!!”)
+}
 }
 </script>
 

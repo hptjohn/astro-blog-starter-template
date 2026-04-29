@@ -93,10 +93,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 function identifyUser() {
 	var userId = "" ;
 	userId = crypto.randomUUID();
-	const phone = document.getElementById('upgradeForm').elements['phone'].value;
-
-alert("Random ID =" + userId)
-alert("phone =" + phone)
 
 analytics.identify(userId , {
 	email : document.getElementById('upgradeForm').elements['email'].value,
@@ -114,8 +110,9 @@ analytics.track('New pet registered' , {
 alert{“Thanks for sending the details. We will be in touch soon”)
 
 }
+</script>
 
-</script is:inline>
+<script is:inline>
 
 function trackButtonClicked() {
 

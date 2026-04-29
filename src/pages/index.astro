@@ -17,7 +17,7 @@ function identifyUser() {
 	userId = crypto.randomUUID();
 
 analytics.identify('userId' , {
-	email : 'document.getElementById("email").value',
+	email : document.getElementById("email").value,
 	phone : document.getElementById("phone").value,
 	plan : document.getElementById("plan").value,
 	petName : document.getElementById("pet").value,
